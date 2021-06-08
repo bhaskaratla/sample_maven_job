@@ -9,9 +9,9 @@ pipeline {
         stage('Sonar checking') {
             steps {
                  script {
-                    def scannerHome = tool 'Sonar';
-                        withSonarQubeEnv("sonarqube-container") {
-                        sh "${tool("sonarqube")}/bin/sonar-scanner \
+                    def scannerHome = tool 'Sonar1';
+                        withSonarQubeEnv("Sonar1") {
+                        sh "${tool("Sonar1")}/bin/sonar-scanner \
                         -Dsonar.projectKey=test-node-js \
                         -Dsonar.sources=. \
                         -Dsonar.css.node=. \
