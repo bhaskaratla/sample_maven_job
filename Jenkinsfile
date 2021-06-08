@@ -1,4 +1,4 @@
-pipeline{
+pipeline {
     angent any
     stages {
         stage('Checkout from SCM') {
