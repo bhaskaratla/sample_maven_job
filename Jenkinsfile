@@ -1,6 +1,5 @@
 pipeline {
     agent any
-    dev MVN = /opt/apache-maven-3.5.4
     stages {
         stage('Checkout from SCM') {
             steps {
