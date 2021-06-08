@@ -16,8 +16,9 @@ pipeline {
                         -Dsonar.css.node=. \
                         -Dsonar.host.url=http://localhost:9000 \
                         -Dsonar.login=your-generated-token-from-sonarqube-container"
-               }
-           }
+                            }
+                        }
+             }
             }
         }
     }
