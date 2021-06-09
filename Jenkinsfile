@@ -15,7 +15,7 @@ pipeline {
                  script {
                     def scannerHome = tool 'Sonar_6.4';
                         withSonarQubeEnv("Sonar-Server") {
-                        sh 'mvn sonar:sonar'
+                        sh 'mvn -X -e sonar:sonar'
                         
                             }
                         }
