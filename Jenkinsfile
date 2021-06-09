@@ -1,5 +1,6 @@
 pipeline {
     agent any
+    def mvnHome = tool name: 'Maven 3.5.0', type: 'maven'
     stages {
         stage('Checkout from SCM') {
             steps {
@@ -11,12 +12,8 @@ pipeline {
                  script {
                     def scannerHome = tool 'Sonar_6.4';
                         withSonarQubeEnv("Sonar-Server") {
-                        sh "${tool("Sonar1")}/ \
-                        -Dsonar.projectKey=test-node-js \
-                        -Dsonar.sources=. \
-                        -Dsonar.css.node=. \
-                        -Dsonar.host.url=http://localhost:9000 \
-                        -Dsonar.login=your-2ccd114f601eab267de809ca08a333ec86841c84"
+                        sh "${mvnHome}/bin/mvn sonar:sonar
+                        
                             }
                         }
              }
