@@ -7,7 +7,6 @@ pipeline {
                      }
             }
         stage('Sonar checking') {
-            def mvnHome = tool name: 'Maven 3.5.0', type: 'maven'
             steps {
                  script {
                     def scannerHome = tool 'Sonar_6.4';
