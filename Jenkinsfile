@@ -29,5 +29,11 @@ pipeline {
                 sh 'mvn test'
             }
         }
+        stage('Compile and Validate') {
+            steps {
+                sh 'mvn compile'
+                sh 'mvn validate'
+            }
+        }
         }       
              }
