@@ -33,6 +33,12 @@ pipeline {
             steps {
                 sh 'mvn compile'
                 sh 'mvn validate'
+                }
+            }    
+                
+        stage('checking working directory') {
+            steps {
+                sh 'pwd'
             }
         }
         }       
