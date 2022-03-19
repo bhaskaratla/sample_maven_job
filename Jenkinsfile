@@ -8,10 +8,14 @@ pipeline {
             }
         }
         stage('1st stage') {
-            sh 'echo "Hello world"'
+            steps {
+                sh 'echo "Hello world"'
+                }
         }
         stage('2nd stage'){
-            sh 'echo "Hello World 2nd time :-)'
+            steps {
+                sh 'echo "Hello World 2nd time :-)'
+                }
         }
     }
 }
