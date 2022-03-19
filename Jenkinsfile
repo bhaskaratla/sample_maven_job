@@ -14,7 +14,7 @@ pipeline {
         }
         stage('2nd stage'){
             steps {
-                sh 'echo "Hello World 2nd time :-)'
+                sh 'echo "Hello World 2nd time :-)"'
                 }
         }
     }
