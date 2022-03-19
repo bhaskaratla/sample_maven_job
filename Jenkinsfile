@@ -3,7 +3,7 @@ pipeline {
     stages  {
         stage('SCM Checkout') {
             steps {
-                // git URL from snip generator
+                git credentialsId: 'bhaskaratla', url: 'http://localhost:8080/gitbucket/git/bhaskar/tomcat_project.git'
             
             }
         }
