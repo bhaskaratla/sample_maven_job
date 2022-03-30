@@ -1,5 +1,9 @@
 pipeline {
+
     agent any
+    tools {
+	maven 'Maven 3.5.0'
+    }
     stages  {
         stage('SCM Checkout') {
             steps {
@@ -7,14 +11,15 @@ pipeline {
             
             }
         }
-        stage('1st stage') {
+        stage('Maven Test') {
             steps {
-                sh 'echo "Hello world"'
+                sh 'mvn test'
                 }
         }
-        stage('2nd stage'){
+        stage('Compile and Validate'){
             steps {
-                sh 'echo "Hello World 2nd time :-)"'
+                sh 'mvn compile'
+		sh 'mvn validate'
                 }
         }
     }
