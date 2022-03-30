@@ -3,7 +3,7 @@ pipeline {
     stages  {
         stage('SCM Checkout') {
             steps {
-                git url: 'http://localhost:8080/gitbucket/git/bhaskar/tomcat_project.git'
+                git url: 'https://github.com/bhaskaratla/sample_maven_job.git'
             
             }
         }
