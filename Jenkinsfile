@@ -25,7 +25,7 @@ pipeline {
 	stage('Building Java application'){
 	    steps {
 		sh 'mvn package'
-		sh 'echo "Printing application location below"'
+		sh 'echo "Application will be saved in target folder in below path"'
 		sh 'pwd'
 		}
 
