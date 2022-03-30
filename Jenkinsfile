@@ -22,5 +22,13 @@ pipeline {
 		sh 'mvn validate'
                 }
         }
+	stage('Building Java application'){
+	    steps {
+		sh 'mvn package'
+		sh 'echo "Printing application location below"'
+		sh 'pwd'
+		}
+
+	}
     }
 }
