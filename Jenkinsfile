@@ -3,7 +3,7 @@ pipeline {
     //tools {
        // maven 'Maven'
        // docker 'Docker'
-    }
+    //}
     stages {
         stage ('Checkout from SCM') {
             steps {
@@ -11,5 +11,5 @@ pipeline {
             }
         }
     }
-//}
+}
 //
