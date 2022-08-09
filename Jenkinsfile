@@ -10,6 +10,10 @@ pipeline {
                 git 'https://github.com/bhaskaratla/simple-java-maven-app.git'
             }
         }
+        stage ('Package') {
+            steps {
+                sh 'mvn package'
+            }
+        }
     }
 }
-//
